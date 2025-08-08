@@ -26,7 +26,6 @@ import {
   Filter,
   Grid3x3,
   List,
-  Loader2,
   Plus,
   Rocket,
   Search,
@@ -38,7 +37,7 @@ import { useState } from "react";
 
 export default function DashboardPage() {
   const { user } = useUser();
-  const { createBoard, boards, loading, error } = useBoards();
+  const { createBoard, boards, error } = useBoards();
   const router = useRouter();
   const { isFreeUser } = usePlan();
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
